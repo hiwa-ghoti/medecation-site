@@ -1,0 +1,120 @@
+/* 採用モック：白黒の手描き、低い側へ寄る文字。結果画面の既存CSSから分離。 */
+.sketch-decorations{position:absolute;inset:0;z-index:-1;pointer-events:none}
+:root{--paper:#fff;--ink:#111;font-family:"UD Digi Kyokasho NP-B","UD Digi Kyokasho NK-B","Hiragino Maru Gothic ProN",Meiryo,sans-serif}
+body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marquee{display:none}.site-footer{display:block;text-align:center;margin:0 auto;padding:0 24px 28px;max-width:1100px}.site-footer p{font-size:12px;font-weight:700;line-height:1.8}.site-footer .footer-brand,.site-footer small{display:none}main{margin:0;min-height:0;scroll-margin-top:0}.sketch-page{position:relative;padding:30px 15.8% 20px;min-height:970px;isolation:isolate;overflow:hidden}.sketch-logo{font-size:clamp(64px,9.2vw,132px);font-weight:1000;text-align:center;letter-spacing:-7px;line-height:1.25;transform:rotate(-9deg);margin:0 0 20px}.sketch-logo a{text-decoration:none}.sketch-intro{font-size:clamp(18px,2.65vw,35px);font-weight:900;text-align:center;line-height:1.55;margin:0 0 35px;letter-spacing:-1.5px}.sketch-label{font-size:clamp(25px,3.4vw,46px);font-weight:900;margin:0 0 38px}.sketch-choices{display:flex;flex-direction:column;gap:60px;padding:0 0 38px}.sketch-button{--angle:4deg;position:relative;isolation:isolate;display:block;border:0;color:#fff;background:transparent;border-radius:3px;min-height:78px;width:100%;text-align:right;padding:9px 22px;font-size:clamp(24px,3.85vw,53px);font-weight:900;line-height:1.3;transform:rotate(var(--angle));transition:translate .18s;box-shadow:none;overflow-wrap:anywhere}.sketch-button:before{content:"";position:absolute;inset:0;z-index:-1;background:#111;filter:url(#ink-edge);border-radius:3px}.sketch-button:nth-child(2){--angle:-3deg;text-align:left;translate:-8px 0}.sketch-button:nth-child(3){width:94%;margin-left:2%}.sketch-button:nth-child(4){--angle:6deg;width:95%;margin-left:5%}.sketch-button.is-selected:before{background:#444}.sketch-button.is-selected{transform:rotate(var(--angle))!important;translate:0 3px!important}.sketch-button:focus-visible{outline:3px dashed #111;outline-offset:9px}.sketch-button:hover{translate:0 -4px}.sketch-button:nth-child(2):hover{translate:-8px -4px}.sketch-dialogue{display:flex;align-items:center;position:relative;margin:0 -1%;min-height:200px}.sketch-bubble{position:relative;width:90%;border:3px solid #111;border-radius:54% 4% 6% 5% / 12% 22% 13% 18%;background:#fff;padding:20px 25px;transform:rotate(.3deg);font-size:clamp(25px,4.6vw,62px);font-weight:900;line-height:1.35;white-space:nowrap;letter-spacing:-1px}.sketch-bubble:before{content:"";position:absolute;width:52px;height:26px;bottom:-8px;right:-39px;background:white;border-bottom:3px solid;border-right:3px solid;transform:skew(46deg) rotate(20deg);z-index:-1}.sketch-bird{position:absolute;width:29%;max-width:285px;right:-29%;bottom:-20px;pointer-events:none}.doodle{position:absolute;z-index:-1;pointer-events:none;width:6.8%;height:90px;overflow:visible}.doodle svg{width:100%;height:100%;overflow:visible}.doodle-1{left:6.5%;top:12%;transform:rotate(-8deg)}.doodle-2{right:6%;top:9%;height:105px}.doodle-3{left:6%;top:36%;height:110px;transform:rotate(-3deg)}.doodle-4{right:5%;top:29%;width:8%}.doodle-5{right:4%;top:49%;transform:rotate(9deg)}.doodle-6{left:5.3%;top:64%;width:8%}.doodle-7{right:5%;top:66%;width:8%}.doodle-8{left:5.5%;bottom:9%;width:8%}.question-page{padding-top:60px;min-height:1000px}.question-page .sketch-label{font-size:clamp(47px,6.7vw,91px);transform:rotate(-8deg);margin:0 0 85px 1%;line-height:1.15;letter-spacing:-3px}.question-page .sketch-choices{gap:70px;padding-bottom:35px}.question-page .sketch-button:nth-child(1){--angle:8deg}.question-page .sketch-button:nth-child(2){--angle:-6deg}.question-page .sketch-button:nth-child(3){--angle:-2deg;text-align:left}.question-page .sketch-dialogue{margin-top:10px}.sketch-back{position:absolute;left:20px;top:22px;font-size:13px;border:0;background:none;padding:10px;z-index:2}.sketch-back:hover{text-decoration:underline}.ink-defs{position:absolute;width:0;height:0;overflow:hidden}.result-screen{margin:25px 6%}.result-screen .clerk-message img{object-fit:contain}
+@media(min-width:1450px){.sketch-page{padding-top:40px;min-height:1120px}.sketch-choices{gap:75px}.question-page{padding-top:70px}.question-page .sketch-choices{gap:85px}.sketch-dialogue{margin-top:15px}.sketch-bird{bottom:-35px}}
+@media(max-width:900px){.sketch-page{min-height:850px;padding-top:40px}.sketch-logo{letter-spacing:-4px}.sketch-intro{margin-bottom:32px}.sketch-label{margin-bottom:30px}.sketch-choices{gap:50px}.sketch-button{min-height:65px;padding-inline:18px}.sketch-dialogue{min-height:180px}.sketch-bubble{padding:18px 15px}.sketch-bird{right:-25%;width:30%;bottom:-5px}.question-page{padding-top:65px}.question-page .sketch-label{margin-bottom:65px}.question-page .sketch-choices{gap:60px}.doodle{height:65px}.doodle-2,.doodle-3{height:80px}}
+@media(max-width:600px){.sketch-page{min-height:0;padding:38px 10% 22px}.sketch-logo{font-size:clamp(56px,14vw,85px);letter-spacing:-4px;margin-bottom:20px}.sketch-intro{font-size:clamp(15px,4vw,22px);letter-spacing:-.5px;line-height:1.7;margin-bottom:32px}.sketch-label{font-size:27px;margin-bottom:32px}.sketch-choices{gap:38px;padding:0 0 25px}.sketch-button{font-size:clamp(21px,5.2vw,31px);min-height:59px;padding:12px 12px}.sketch-button:nth-child(2){translate:0 0}.sketch-button:nth-child(2):hover{translate:0 -4px}.sketch-dialogue{min-height:170px;align-items:flex-start;padding-top:17px;margin:0}.sketch-bubble{font-size:clamp(22px,5.6vw,33px);width:86%;padding:17px 10px;letter-spacing:-1px;border-width:2px}.sketch-bubble:before{width:25px;height:18px;right:-18px;bottom:-7px;border-width:2px}.sketch-bird{width:34%;right:-11%;bottom:0}.doodle{width:9%;height:42px}.doodle-1{top:8%;left:1%}.doodle-2{top:8%;right:0;height:46px}.doodle-3{left:0;top:34%;height:48px}.doodle-4{right:0;top:31%;width:9%}.doodle-5{right:0;top:54%}.doodle-6{left:0;top:61%;width:9%}.doodle-7{right:0;top:69%;width:9%}.doodle-8{left:0;bottom:10%;width:9%}.site-footer{padding:0 25px 24px}.site-footer p{font-size:9px}.site-footer p br{display:none}.question-page{padding-top:65px}.question-page .sketch-label{font-size:clamp(43px,11vw,62px);margin:0 0 60px 3%}.question-page .sketch-choices{gap:48px;padding-bottom:28px}.question-page .sketch-button{font-size:clamp(17px,4.5vw,27px);padding-inline:10px}.question-page .sketch-dialogue{margin-top:0}.sketch-back{top:11px;left:12px;font-size:11px}.question-page .doodle-1,.question-page .doodle-2{top:12%}.result-screen{margin:15px 6%}}
+.sketch-logo,.sketch-label,.sketch-button,.sketch-bubble{-webkit-text-stroke:.55px currentColor;paint-order:stroke fill}
+@media(min-width:901px){.sketch-bird{right:-20%}}
+@media(min-width:601px) and (max-width:900px){.sketch-bird{right:-18%}}
+@media(prefers-reduced-motion:reduce){.sketch-button{transition:none}}
+
+/* 回転で増える表示領域を、各ボタンの親要素が確保する。 */
+.sketch-page{min-height:0;padding-bottom:35px}
+.sketch-logo{width:fit-content;max-width:100%;margin:20px auto 45px}
+.sketch-label{margin-bottom:12px}
+.sketch-choices,.question-page .sketch-choices{container-type:inline-size;gap:16px;padding:0 0 16px}
+.sketch-choice-slot{--tilt-space:4cqw;padding-block:calc(var(--tilt-space) + 12px);min-width:0}
+.sketch-choice-slot:nth-child(2){--tilt-space:3cqw}
+.sketch-choice-slot:nth-child(3){--tilt-space:4cqw}
+.sketch-choice-slot .sketch-button{--angle:4deg;width:100%;margin:0;translate:0 0;text-align:right}
+.sketch-choice-slot:nth-child(2) .sketch-button{--angle:-3deg;text-align:left;translate:0 0}
+.sketch-choice-slot:nth-child(3) .sketch-button{width:94%;margin-left:2%}
+.question-page .sketch-label{width:fit-content;max-width:100%;margin:15px 0 30px 1%}
+.question-page .sketch-choice-slot:nth-child(1){--tilt-space:7.5cqw}
+.question-page .sketch-choice-slot:nth-child(2){--tilt-space:6cqw}
+.question-page .sketch-choice-slot:nth-child(3){--tilt-space:2.5cqw}
+.question-page .sketch-choice-slot:nth-child(4){--tilt-space:6cqw}
+.question-page .sketch-choice-slot:nth-child(1) .sketch-button{--angle:8deg;text-align:right}
+.question-page .sketch-choice-slot:nth-child(2) .sketch-button{--angle:-6deg;text-align:left}
+.question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:-2deg;text-align:left}
+.question-page .sketch-choice-slot:nth-child(4) .sketch-button{--angle:6deg;width:95%;margin-left:5%;text-align:right}
+.sketch-dialogue,.question-page .sketch-dialogue{display:grid;grid-template-columns:minmax(0,1fr) 25%;gap:30px;align-items:center;width:118%;min-height:0;margin:10px -1% 0;padding:0}
+.sketch-bubble{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;font-size:clamp(25px,4.1vw,56px)}
+.sketch-bird{position:static;display:block;width:100%;height:auto;max-width:none;align-self:center;z-index:0}
+.sketch-choice-slot .sketch-button:hover,.sketch-choice-slot:nth-child(2) .sketch-button:hover{translate:0 -4px}
+@media(max-width:600px){
+ .sketch-logo{margin:5px auto 32px}
+ .sketch-choice-slot{padding-block:calc(var(--tilt-space) + 10px)}
+ .sketch-choices,.question-page .sketch-choices{gap:12px;padding-bottom:14px}
+ .question-page .sketch-label{margin-bottom:24px}
+ .sketch-dialogue,.question-page .sketch-dialogue{width:110%;grid-template-columns:minmax(0,1fr) 28%;gap:17px;margin-top:16px}
+ .sketch-bubble{font-size:clamp(18px,4.6vw,27px);padding:17px 12px}
+ .sketch-bubble:before{width:20px;right:-15px}
+ .sketch-page{padding-bottom:24px}
+}
+
+/* 枠としっぽを単一の閉じたパスにし、継ぎ目や線の欠けを防ぐ。 */
+.sketch-bubble{border:0;border-radius:0;background:transparent;transform:none;padding:24px 9% 48px 24px}
+.sketch-bubble:before,.sketch-bubble:after{content:none;display:none}
+.bubble-outline{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sketch-bubble>span{position:relative;display:block}
+@media(max-width:600px){.sketch-bubble{padding:20px 10% 38px 15px}}
+
+/* ２ページ目は画面の高さにも合わせて幅・傾き・余白を調整。 */
+@media(min-width:700px){
+ .question-page{width:min(960px,calc(120svh - 180px),calc(100vw - 280px));min-height:calc(100svh - 52px);display:grid;grid-template-rows:auto 1fr auto;margin-inline:auto;padding:28px 0 12px;overflow:visible}
+ .question-page .sketch-label{font-size:clamp(40px,8svh,76px);margin:12px 0 20px 1%;line-height:1.15;letter-spacing:-2px}
+ .question-page .sketch-choices{justify-content:space-evenly;gap:10px;padding-bottom:12px}
+ .question-page .sketch-choice-slot{padding-block:calc(var(--tilt-space) + 4px)}
+ .question-page .sketch-choice-slot:nth-child(1){--tilt-space:4.5cqw}
+ .question-page .sketch-choice-slot:nth-child(2){--tilt-space:3.6cqw}
+ .question-page .sketch-choice-slot:nth-child(3){--tilt-space:2.7cqw}
+ .question-page .sketch-choice-slot:nth-child(4){--tilt-space:3.6cqw}
+ .question-page .sketch-choice-slot:nth-child(1) .sketch-button{--angle:5deg}
+ .question-page .sketch-choice-slot:nth-child(2) .sketch-button{--angle:-4deg}
+ .question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:-3deg}
+ .question-page .sketch-choice-slot:nth-child(4) .sketch-button{--angle:4deg}
+ .question-page .sketch-button{font-size:clamp(24px,4svh,44px);min-height:clamp(48px,6.5svh,76px);line-height:1.25;padding:9px 20px}
+ .question-page .sketch-dialogue{margin-top:12px;gap:24px;grid-template-columns:minmax(0,1fr) 24%;width:116%}
+ .question-page .sketch-bubble{font-size:clamp(28px,4.6svh,50px);padding:20px 9% 40px 22px}
+ .question-page .sketch-bird{height:clamp(110px,19svh,200px);object-fit:contain}
+ .question-page .sketch-back{left:-80px;top:12px}
+ .question-page .doodle{height:clamp(40px,8svh,70px);width:11%}
+ .question-page .doodle-1,.question-page .doodle-3,.question-page .doodle-6,.question-page .doodle-8{left:-17%}
+ .question-page .doodle-2,.question-page .doodle-4,.question-page .doodle-5,.question-page .doodle-7{right:-18%}
+ body[data-screen="2"] .site-footer{padding-bottom:10px}
+ body[data-screen="2"] .site-footer p{font-size:10px;line-height:1.6}
+}
+@media(min-width:700px) and (max-height:700px){
+ .question-page{padding-top:20px}
+ .question-page .sketch-label{font-size:42px;margin:8px 0 12px 1%}
+ .question-page .sketch-choices{gap:6px;padding-bottom:6px}
+ .question-page .sketch-button{font-size:22px;min-height:44px;padding:7px 16px}
+ .question-page .sketch-bubble{font-size:28px;padding:16px 9% 30px 18px}
+ .question-page .sketch-bird{height:105px}
+}
+
+/* １ページ目も画面全体に配分し、ロゴ・説明・３択の余白を調整。 */
+@media(min-width:700px){
+ .home-page{width:min(960px,calc(100svh - 120px),calc(100vw - 280px));min-height:calc(100svh - 52px);display:grid;grid-template-rows:auto auto auto 1fr auto;margin-inline:auto;padding:16px 0 8px;overflow:visible}
+ .home-page .sketch-logo{font-size:clamp(56px,9svh,96px);line-height:1.1;letter-spacing:-4px;margin:8px auto 32px}
+ .home-page .sketch-intro{font-size:clamp(17px,2.2svh,25px);line-height:1.55;letter-spacing:-.6px;margin:0 0 8px}
+ .home-page .sketch-label{font-size:clamp(24px,3svh,34px);line-height:1.2;margin:0 0 6px}
+ .home-page .sketch-choices{justify-content:space-evenly;gap:6px;padding-bottom:4px}
+ .home-page .sketch-choice-slot{--tilt-space:3.6cqw;padding-block:calc(var(--tilt-space) + 3px)}
+ .home-page .sketch-choice-slot .sketch-button{--angle:4deg;min-height:44px;font-size:clamp(24px,3.4svh,40px);line-height:1.25;padding:7px 20px}
+ .home-page .sketch-choice-slot:nth-child(2) .sketch-button{--angle:-4deg}
+ .home-page .sketch-dialogue{margin-top:8px;gap:24px;grid-template-columns:minmax(0,1fr) 24%;width:116%}
+ .home-page .sketch-bubble{font-size:clamp(27px,4svh,46px);padding:18px 9% 36px 20px}
+ .home-page .sketch-bird{height:clamp(110px,16svh,180px);object-fit:contain}
+ .home-page .doodle{height:clamp(42px,8svh,80px);width:11%}
+ .home-page .doodle-1,.home-page .doodle-3,.home-page .doodle-6,.home-page .doodle-8{left:-17%}
+ .home-page .doodle-2,.home-page .doodle-4,.home-page .doodle-5,.home-page .doodle-7{right:-18%}
+ body[data-screen="1"] .site-footer{padding-bottom:10px}
+ body[data-screen="1"] .site-footer p{font-size:10px;line-height:1.6}
+}
+@media(min-width:700px) and (max-height:700px){
+ .home-page{width:min(600px,calc(100svh - 180px),calc(100vw - 280px));padding-top:10px}
+ .home-page .sketch-logo{font-size:48px;line-height:1.05;margin:6px auto 20px}
+ .home-page .sketch-intro{font-size:14px;line-height:1.4;margin-bottom:6px}
+ .home-page .sketch-label{font-size:20px;margin-bottom:4px}
+ .home-page .sketch-button{font-size:20px;padding-inline:14px}
+ .home-page .sketch-bubble{font-size:24px;padding:14px 9% 28px 16px}
+ .home-page .sketch-bird{height:85px}
+}
+
+/* スマホのお悩みだけは、画面幅によらず水平・中央揃え。 */
+.question-page .sketch-choice-slot:nth-child(3){--tilt-space:0px}
+.question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:0deg;text-align:center}

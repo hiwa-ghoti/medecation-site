@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="ちいさなおなやみに、ちょっとへんてこなおくすりを。架空のお薬を処方する、あそびの診断サイトです。">
+  <title>薬局.com｜こころに、ひとさじのへんてこ。</title>
+  <link rel="icon" href="assets/images/capsule.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sketch.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <svg class="ink-defs" aria-hidden="true"><defs>
+ <symbol id="capsule" viewBox="0 0 100 90"><g transform="rotate(-32 50 45)"><path d="M24 28C4 29 4 60 25 61L74 60C96 60 95 27 74 28Z"/><path d="M49 29L50 60"/></g><path d="M66 7L69 1M78 15L84 9M86 28L94 26"/></symbol>
+ <symbol id="bottle" viewBox="0 0 90 110"><g transform="rotate(9 45 55)"><path d="M22 31L20 41L18 88Q46 104 73 87L69 40L65 31"/><path d="M22 9Q45 2 68 9L67 29Q44 35 21 27Z"/><path d="M31 12L31 22M44 11V23M57 13V24"/><path d="M19 49Q45 57 70 50M19 82Q44 89 73 81"/><ellipse cx="45" cy="69" rx="15" ry="8" transform="rotate(-25 45 69)"/></g></symbol>
+ <symbol id="blister" viewBox="0 0 90 110"><g transform="rotate(17 45 55)"><path d="M21 13L72 15L70 98L18 96Z"/><circle cx="33" cy="31" r="7"/><circle cx="57" cy="32" r="7"/><circle cx="33" cy="55" r="7"/><circle cx="57" cy="56" r="7"/><circle cx="32" cy="79" r="7"/><circle cx="56" cy="80" r="7"/></g><path d="M8 15L3 10M21 6L20 1"/></symbol>
+ <symbol id="sachets" viewBox="0 0 110 100"><path d="M55 22L61 19L65 24L70 21L75 27L81 24L86 30L91 26L96 32L101 29L85 88L80 84L75 88L69 83L64 86L59 81L54 84L48 79L43 82Z"/><path d="M9 20L15 16L20 20L25 15L30 19L35 14L40 18L45 12L50 16L55 11L61 17L66 13L78 73L72 77L67 72L62 78L57 74L52 80L46 75L41 81L36 77L31 83L25 78L20 82Z"/><path d="M23 31L58 24M28 66L63 59M34 55L43 36L58 52Z"/></symbol>
+ <symbol id="tube" viewBox="0 0 110 75"><g transform="rotate(-19 55 37)"><path d="M24 24L91 21L93 52L25 50Z"/><path d="M25 28L12 28L11 46L25 47M5 28L12 28L11 46L4 46ZM84 23L86 51"/><path d="M50 30V43M44 36H57" stroke-width="6"/></g><path d="M23 9L20 3M11 15L6 11"/></symbol>
+ <symbol id="box" viewBox="0 0 110 85"><path d="M15 28L35 14L97 20L96 66L76 76L14 69Z"/><path d="M15 28L77 34L97 20M77 34L76 76"/><rect x="24" y="43" width="25" height="12" rx="6" transform="rotate(-30 36 49)"/><path d="M54 47L67 48M54 57L67 58"/></symbol>
+ <symbol id="tablets" viewBox="0 0 100 85"><path d="M12 34L13 46C18 62 52 59 55 45V34M48 52V63C55 79 87 75 89 61L90 50"/><ellipse cx="34" cy="34" rx="22" ry="14" transform="rotate(-10 34 34)"/><path d="M23 40L44 28"/><ellipse cx="69" cy="51" rx="21" ry="14" transform="rotate(-9 69 51)"/><path d="M58 57L79 45M10 13L6 8M23 9L22 2"/></symbol>
+<filter id="ink-edge" x="-3%" y="-8%" width="106%" height="116%"><feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="4" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
+  <div class="site-shell">
+    <header class="site-header">
+      <a href="#" class="brand" aria-label="薬局.com トップへ"><span class="brand-mark" aria-hidden="true">✚</span><span>薬局<span class="dot-com">.com</span><small>こころに、ひとさじのへんてこ。</small></span></a>
+      <div class="open-sign"><span></span> きょうも、ゆるく営業中 <span class="hours">00:00 — 24:00</span></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="step-line"><span class="eyebrow">THE LITTLE WORRY PHARMACY</span><ol class="steps" aria-label="診断の進みぐあい"><li data-step="1" aria-current="step"><span>01</span> おなやみ</li><li data-step="2"><span>02</span> もうすこし</li><li data-step="3"><span>03</span> おくすり</li></ol></div>
+      <div id="screen"></div>
+      <noscript><p class="notice">おくすりをえらぶには、ブラウザーのJavaScriptを有効にしてね。</p></noscript>
+    </main>
+    <div class="marquee" aria-hidden="true"><span>ちいさなおなやみ、大歓迎。 ✳ おだいじにー！ ✳ ききめは、きぶんしだい。 ✳ ちいさなおなやみ、大歓迎。 ✳ おだいじにー！ ✳</span></div>
+    <footer class="site-footer"><p class="footer-brand">薬局.com <span>まじめに、ふざけてます。</span></p><p>このサイトに登場するおくすりはぜんぶ架空のものです。<br>実際の医薬品や医療上の診断とは関係ありません。</p><small>© 薬局.com</small></footer>
+  </div>
+</body>
+</html>
