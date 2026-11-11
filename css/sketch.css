@@ -30,7 +30,8 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
 .question-page .sketch-choice-slot:nth-child(2) .sketch-button{--angle:-6deg;text-align:left}
 .question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:-2deg;text-align:left}
 .question-page .sketch-choice-slot:nth-child(4) .sketch-button{--angle:6deg;width:95%;margin-left:5%;text-align:right}
-.sketch-dialogue,.question-page .sketch-dialogue{display:grid;grid-template-columns:minmax(0,1fr) 25%;gap:30px;align-items:center;width:118%;min-height:0;margin:10px -1% 0;padding:0}
+:root{--clerk-size:clamp(64px,min(24vw,16svh),180px)}
+.sketch-dialogue,.question-page .sketch-dialogue{display:grid;grid-template-columns:minmax(0,1fr) var(--clerk-size);gap:30px;align-items:center;width:118%;min-height:0;margin:10px -1% 0;padding:0}
 .sketch-bubble{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;font-size:clamp(25px,4.1vw,56px)}
 .sketch-bird{position:static;display:block;width:100%;height:auto;max-width:none;align-self:center;z-index:0}
 .sketch-choice-slot .sketch-button:hover,.sketch-choice-slot:nth-child(2) .sketch-button:hover{translate:0 -4px}
@@ -39,7 +40,7 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
  .sketch-choice-slot{padding-block:calc(var(--tilt-space) + 10px)}
  .sketch-choices,.question-page .sketch-choices{gap:12px;padding-bottom:14px}
  .question-page .sketch-label{margin-bottom:24px}
- .sketch-dialogue,.question-page .sketch-dialogue{width:110%;grid-template-columns:minmax(0,1fr) 28%;gap:17px;margin-top:16px}
+ .sketch-dialogue,.question-page .sketch-dialogue{width:110%;gap:17px;margin-top:16px}
  .sketch-bubble{font-size:clamp(18px,4.6vw,27px);padding:17px 12px}
  .sketch-bubble:before{width:20px;right:-15px}
  .sketch-page{padding-bottom:24px}
@@ -49,7 +50,7 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
 .sketch-bubble{border:0;border-radius:0;background:transparent;transform:none;padding:24px 9% 48px 24px}
 .sketch-bubble:before,.sketch-bubble:after{content:none;display:none}
 .bubble-outline{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.sketch-bubble>span{position:relative;display:block}
+.sketch-bubble>span{position:relative;display:block;text-align:center}
 @media(max-width:600px){.sketch-bubble{padding:20px 10% 38px 15px}}
 
 /* ２ページ目は画面の高さにも合わせて幅・傾き・余白を調整。 */
@@ -67,9 +68,8 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
  .question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:-3deg}
  .question-page .sketch-choice-slot:nth-child(4) .sketch-button{--angle:4deg}
  .question-page .sketch-button{font-size:clamp(24px,4svh,44px);min-height:clamp(48px,6.5svh,76px);line-height:1.25;padding:9px 20px}
- .question-page .sketch-dialogue{margin-top:12px;gap:24px;grid-template-columns:minmax(0,1fr) 24%;width:116%}
+ .question-page .sketch-dialogue{margin-top:12px;gap:24px;width:116%}
  .question-page .sketch-bubble{font-size:clamp(28px,4.6svh,50px);padding:20px 9% 40px 22px}
- .question-page .sketch-bird{height:clamp(110px,19svh,200px);object-fit:contain}
  .question-page .sketch-back{left:-80px;top:12px}
  .question-page .doodle{height:clamp(40px,8svh,70px);width:11%}
  .question-page .doodle-1,.question-page .doodle-3,.question-page .doodle-6,.question-page .doodle-8{left:-17%}
@@ -83,7 +83,6 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
  .question-page .sketch-choices{gap:6px;padding-bottom:6px}
  .question-page .sketch-button{font-size:22px;min-height:44px;padding:7px 16px}
  .question-page .sketch-bubble{font-size:28px;padding:16px 9% 30px 18px}
- .question-page .sketch-bird{height:105px}
 }
 
 /* １ページ目も画面全体に配分し、ロゴ・説明・３択の余白を調整。 */
@@ -96,9 +95,8 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
  .home-page .sketch-choice-slot{--tilt-space:3.6cqw;padding-block:calc(var(--tilt-space) + 3px)}
  .home-page .sketch-choice-slot .sketch-button{--angle:4deg;min-height:44px;font-size:clamp(24px,3.4svh,40px);line-height:1.25;padding:7px 20px}
  .home-page .sketch-choice-slot:nth-child(2) .sketch-button{--angle:-4deg}
- .home-page .sketch-dialogue{margin-top:8px;gap:24px;grid-template-columns:minmax(0,1fr) 24%;width:116%}
+ .home-page .sketch-dialogue{margin-top:8px;gap:24px;width:116%}
  .home-page .sketch-bubble{font-size:clamp(27px,4svh,46px);padding:18px 9% 36px 20px}
- .home-page .sketch-bird{height:clamp(110px,16svh,180px);object-fit:contain}
  .home-page .doodle{height:clamp(42px,8svh,80px);width:11%}
  .home-page .doodle-1,.home-page .doodle-3,.home-page .doodle-6,.home-page .doodle-8{left:-17%}
  .home-page .doodle-2,.home-page .doodle-4,.home-page .doodle-5,.home-page .doodle-7{right:-18%}
@@ -106,15 +104,62 @@ body{background:white}.site-shell{max-width:1440px}.site-header,.step-line,.marq
  body[data-screen="1"] .site-footer p{font-size:10px;line-height:1.6}
 }
 @media(min-width:700px) and (max-height:700px){
+ :root{--clerk-size:85px}
  .home-page{width:min(600px,calc(100svh - 180px),calc(100vw - 280px));padding-top:10px}
  .home-page .sketch-logo{font-size:48px;line-height:1.05;margin:6px auto 20px}
  .home-page .sketch-intro{font-size:14px;line-height:1.4;margin-bottom:6px}
  .home-page .sketch-label{font-size:20px;margin-bottom:4px}
  .home-page .sketch-button{font-size:20px;padding-inline:14px}
  .home-page .sketch-bubble{font-size:24px;padding:14px 9% 28px 16px}
- .home-page .sketch-bird{height:85px}
 }
 
 /* スマホのお悩みだけは、画面幅によらず水平・中央揃え。 */
 .question-page .sketch-choice-slot:nth-child(3){--tilt-space:0px}
 .question-page .sketch-choice-slot:nth-child(3) .sketch-button{--angle:0deg;text-align:center}
+
+.capsule-whole,
+.capsule-piece {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.capsule-piece {
+  visibility: hidden;
+  transition: transform .24s ease-out, visibility 0s .24s;
+}
+
+.capsule-whole {
+  transition: visibility 0s .24s;
+}
+
+@media (hover: hover) {
+  .breakable-capsule {
+    pointer-events: auto;
+  }
+
+  .breakable-capsule:hover .capsule-whole {
+    visibility: hidden;
+    transition-delay: 0s;
+  }
+
+  .breakable-capsule:hover .capsule-piece {
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .breakable-capsule:hover .capsule-piece-left {
+    transform: translate(-13%, 8%) rotate(-13deg);
+  }
+
+  .breakable-capsule:hover .capsule-piece-right {
+    transform: translate(13%, -8%) rotate(13deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capsule-whole,
+  .capsule-piece {
+    transition: none;
+  }
+}

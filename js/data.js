@@ -43,9 +43,23 @@ const medicineData = {
 
 /* 採用した「お悩み２」の4択。以前の15種類のデータも残しています。 */
 const followupData = [
-  { id: 'life', text: 'じんせいがつらい', resultId: 'chottodake' },
-  { id: 'snacks', text: 'おかしをたべすぎちゃう', resultId: 'oyatsu' },
-  { id: 'phone', text: 'スマホずっとみちゃう', resultId: 'yorimichi' },
-  { id: 'nothing_else', text: 'ないってば！', resultId: null }
+  { id: 'life', text: 'じんせいがつらい' },
+  { id: 'snacks', text: 'おかしをたべすぎちゃう' },
+  { id: 'phone', text: 'スマホずっとみちゃう' },
+  { id: 'nothing_else', text: 'ないってば！' }
 ];
-const initialPrescription = { homework: 'yarukideru', sleepy: 'nemuketon', nothing: 'nantonaku' };
+
+const resultByAnswers = {
+  homework: { life: 'posikusa', snacks: 'focasion', phone: 'focasion', nothing_else: 'posikusa' },
+  sleepy: { life: 'gaming_prazole', snacks: 'kakureisan', phone: 'esumahon_moka', nothing_else: 'esumahon_moka' },
+  nothing: { life: 'gaming_prazole', snacks: 'kakureisan', phone: 'esumahon_moka', nothing_else: 'reality' }
+};
+
+const resultNames = {
+  posikusa: 'ポジクサー',
+  focasion: 'フォーカシオン',
+  gaming_prazole: 'ゲーミングプラゾール',
+  kakureisan: '覚苓散',
+  esumahon_moka: 'エスマホンモカ',
+  reality: '現実'
+};
